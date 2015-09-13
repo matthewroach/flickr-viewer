@@ -1,0 +1,82 @@
+
+
+.feed-list {
+	background: $white;
+	border-top: 6px solid $secondary-brand-color;
+	display: inline-block;
+	width: 100%;
+
+
+	.feed-item {
+		border-bottom: 1px solid $grey;
+		display: inline-block;
+		float: left;
+		padding: 1em 1em 1em 1em;
+		width: 100%;
+
+		&--image {
+			height: 125px;
+			float: left;
+			overflow: hidden;
+			width: 20%;
+			max-width: 125px;
+
+			& img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+
+
+		&--info {
+			float: left;
+			margin: 0 0 0 2%;
+			width: 78%;
+
+			h2 a {
+				display: block;
+				float: none;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			a,
+			p {
+				float: left;
+				margin: 0 1em 0 0;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+	    @media ( max-width: 800px ) {
+	    	p {
+	    		width: 100%;
+	    		margin-right: 0;
+	    		margin-bottom: 0.7em;
+	    	}
+	    }
+
+		}
+
+		&--800 {
+			display: none;
+			margin-left: 0;
+
+			@media ( max-width: 800px ) {
+				display: inline-block;
+			}
+		}
+
+		&--800up {
+			display: inline-block;
+
+			@media ( max-width: 800px ) {
+				display: none;
+			}
+		}
+	}
+
+}

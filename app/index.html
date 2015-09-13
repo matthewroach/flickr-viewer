@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Flickr Feed Viewer</title>
+
+	<meta name="description" content="A simple flickr feed viewer">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="a/css/flickr-viewer.css" />
+
+
+</head>
+<body>
+
+
+	<div class="container">
+
+		<h1>Flickr Public Feed</h1>
+
+		<div id="main-body">
+
+			<div id="feed-list" class="feed-list">
+			</div>
+
+			<div id="feed-details">
+			</div>
+
+
+		</div><!-- #main-body -->
+
+	</div><!-- .container -->
+
+
+	<script type="text/template" id="feed-item-template">
+		<a href="#" data-id="<%= id %>" class="feed-item--image">
+			<img src="<%= media.m %>" alt="<%= title %>" />
+		</a>
+
+		<div class="feed-item--info">
+			<h2>
+				<a href="<%= link %>"><%= title %></a>
+			</h2>
+
+			<div class="feed-item--meta">
+				<a href="http://flickr.com/photos/<%= author_id %>" title="Photo Author Link" class="feed-item--800up"><%= author %></a>
+				<p>Published: <time datetime=""><%= publishedDate %> at <%= publishedTime %></p>
+				<a href="http://flickr.com/photos/<%= author_id %>" title="Photo Author Link" class="feed-item--800"><%= author %></a>
+				<a href="<%= link %>" title="View on Flickr">View on Flickr</a>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="feed-item-details">
+		<div class="feed-view">
+			<h2><a href="<%= link %>"><%= title %></a></h2>
+
+			<a href="#" title="Back" class="feed-view--back">Back</a>
+
+			<div class="feed-view--meta">
+				<p>
+					<a href="http://flickr.com/photos/<%= author_id %>" title="Photo Author Link">Photo author</a> |
+					Published: <time datetime=""><%= publishedDate %> at <%= publishedTime %>
+				</p>
+
+			</div>
+
+			<div class="feed-view--image">
+				<img src="<%= media.m %>" alt="<%= title %>" />
+			</div>
+
+			<div class="feed-view--info">
+				<%= description %>
+
+				<ul class="feed-view--tags">
+					<li>Tags:</li>
+					<% _.each(tagList, function(post){ %>
+						<li><a href="#"><%= post %></a></li>
+	        <% }); %>
+				</ul>
+
+			</div>
+		</div>
+	</script>
+
+	<script src="a/js/flickr-viewer.js"></script>
+
+
+</body>
+</html>

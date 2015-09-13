@@ -1,0 +1,52 @@
+
+
+body {
+	background: $background-color;
+	color: $base-font-color;
+	font: {
+		family: $body-font-family;
+		size: $body-font-size;
+	}
+	line-height: $body-line-height;
+}
+
+
+.container {
+	margin: 0 auto;
+	padding: 1em 1em 1em 1em;
+	width: 90%;
+	max-width: 900px;
+}
+
+
+h1 {
+	font-size: 2.6em;
+	margin: 0.3em 0 0.5em 0;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+
+a {
+	color: $active-link;
+	text-decoration: none;
+
+	&:hover {
+		color: $hover-link;
+		text-decoration: underline;
+	}
+
+	&:visited {
+		color: lighten( $active-link, 5 );
+	}
+}
+
+
+img {
+	color: $red;
+	font: {
+		style: italic;
+	}
+}

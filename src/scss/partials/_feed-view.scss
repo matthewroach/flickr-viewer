@@ -1,0 +1,75 @@
+
+
+.feed-view {
+	background: $white;
+	border-top: 6px solid $secondary-brand-color;
+	display: inline-block;
+	padding: 1em 1em 1em 1em;
+	position: relative;
+
+	h2 {
+		width: 90%;
+	}
+
+	&--meta {
+		margin: 0.7em 0 1em 0;
+	}
+
+	&--image {
+		float: left;
+		width: 20%;
+		max-width: 125px;
+
+		& img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&--info {
+		float: left;
+		margin: 0 0 0 2%;
+		width: 78%;
+
+		p {
+			margin: 0 0 1em 0;
+
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
+				display: none;
+			}
+		}
+	}
+
+	&--back {
+		background: $secondary-brand-color;
+		border-bottom: 2px solid $primary-brand-color;
+		color: $white;
+		padding: 0.2em 0.3em 0.2em 0.3em;
+		position: absolute;
+		top: 1.3em;
+		right: 1em;
+
+		&:hover {
+			background: $primary-brand-color;
+			color: $white;
+		}
+
+		&:visited {
+			color: $white;
+		}
+	}
+
+
+	&--tags li {
+		float: left;
+		list-style: none;
+		margin: 0 0 0 0.2em;
+		padding: 0.2em 0.2em 0.2em 0.2em;
+
+		&:first-child {
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
