@@ -16,4 +16,6 @@ Grunt Dev - will run a local development server and watch the Sass and JS file, 
 
 ## Testing
 
+Change the server_path to point to the seleinum location on your computer, and also update the chrome driver location, if not on your PATH.
+
 Initial testing is located in the tests folder, at the moment just a basic test to check inital page is rendering.
